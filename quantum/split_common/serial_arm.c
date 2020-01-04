@@ -32,7 +32,7 @@
 
 // helper to convert GPIOB to EXT_MODE_GPIOB
 #ifdef USE_GPIOV1
-#    define ExtModePort(pin) (((uint32_t)PAL_PORT(pin) & 0x0000FF00U) >> 6) - 0x20
+#    define ExtModePort(pin) ((((uint32_t)PAL_PORT(pin) & 0x0000FF00U) >> 6) - 0x20)
 #else
 #    define ExtModePort(pin) (((uint32_t)PAL_PORT(pin) & 0x0000FF00U) >> 6)
 #endif
